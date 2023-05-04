@@ -10,8 +10,16 @@ const routes: Routes = [
     path: 'dashboard',
     component: PagesComponent,
     children: [
-      { path: '', component: DashboardComponent },
-      { path: 'account-settings', component: AccountSettingsComponent },
+      {
+        path: '',
+        component: DashboardComponent,
+        data: { titulo: 'Dashboard' },
+      },
+      {
+        path: 'account-settings',
+        component: AccountSettingsComponent,
+        data: { titulo: 'Ajustes de cuenta' },
+      },
     ],
   },
 ];
